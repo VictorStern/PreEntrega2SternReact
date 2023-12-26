@@ -1,33 +1,30 @@
-import React from 'react';
-import { Card, CardBody, Stack, Heading, Text, Divider, CardFooter, ButtonGroup, Button } from '@chakra-ui/react';
-import ItemCount from './ItemCount';
+import React from 'react'
+import { Card, CardBody, Stack, Heading,GridItem, Text, CardFooter, Button } from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
 
 
-const Item = ({titulo, descripcion,precio}) => {
-    return (
-        <Card maxW='sm'>
-            <CardBody>
-                {/* <Image */}
-                {/* src="" */}
-                {/* /> */}
-                <Stack mt='6' spacing='3'>
-                    <Heading size='md'> {titulo}</Heading>
-                    <Text>
-                        {descripcion}
-                    </Text>
-                    <Text color='blue.600' fontSize='2xl'>
-                        $ {precio}
-                    </Text>
-                </Stack>
-            </CardBody>
-            <Divider />
-            <CardFooter>
-                <ButtonGroup spacing='2'>
-                    <ItemCount />
-                </ButtonGroup>
-            </CardFooter>
-        </Card>
-    );
+const Item = ( {producto} ) => {
+  return (
+    <GridItem w='100%' className='cardim'>
+      <Card >
+        <CardBody>
+          <Stack >
+              <img className='imag' src={producto.imagen} alt={producto.nombre}/>
+            <Heading size='md' color='black'>
+              <p>Producto: {producto.nombre}</p>
+            </Heading>
+            <Text color='black' size='md' >Categoría: {producto.categoria}</Text>
+          </Stack>
+        </CardBody>
+        <CardFooter>
+          <Link to={`/item/${producto.id}`} >
+            <Button className='botonn'>Más detalles</Button>
+          </Link>
+        </CardFooter>
+      
+      </Card>
+      </GridItem>
+  )
 }
 
 export default Item;

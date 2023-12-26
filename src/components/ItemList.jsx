@@ -1,25 +1,18 @@
-import React from 'react';
-import Item from './Item';
+import React from 'react'
+import Item from './Item'
+import { Grid } from '@chakra-ui/react'
+const ItemList = ( {productos} ) => {
 
-const ItemList = ({ productos }) => {
-    console.log(productos);
-    return (
-        <div>
-            {
-                productos.map((p) => {
-                    return (
-                        <Item 
-                        key={p.id}
-                        titulo={p.titulo}
-                        descripcion={p.descripcion}
-                        precio={p.precio}
-                        />
-
-                    )
-                })
-            }
-        </div>
-    )
+  return (
+    <Grid templateColumns='repeat(3, 1fr)' gap={6}>
+      {productos.length > 0 && productos.map((prod) => {
+        return (
+          <Item key={prod.id} producto={prod} />
+        )
+      })
+      }
+     </Grid>
+  )
 }
 
 export default ItemList;

@@ -1,0 +1,83 @@
+[
+    {
+        "id": 1,
+        "imagen": "src/assets/afeitadora1.jpg",
+        "categoria": "Accesorios de corte.",
+        "nombre": "Afeitadora gris",
+        "descripcion": "Descripción de producto A",
+        "precio": "5000"
+    },
+    {
+        "id": 2,
+        "categoria": "Accesorios de peluqueria.",
+        "nombre": " Brocha",
+        "descripcion": "Brocha",
+        "precio": 6000,
+        "imagen": "src/assets/brocha.jpg"
+    },
+    {
+        "id": 24,
+        "categoria": "Muebles.",
+        "nombre": "Sillon ",
+        "descripcion": "Sillon black cuero",
+        "precio": 130000,
+        "imagen": "src/assets/sillon.jpg"
+    },
+    {
+        "id": 3,
+        "categoria": "Accesorios de peluqueria.",
+        "nombre": "Capa ",
+        "descripcion": "Capa transparente",
+        "precio": 10000,
+        "imagen": "src/assets/capas1.jpg"
+    },
+    {
+        "id": 25,
+        "categoria": "Muebles.",
+        "nombre": "Sillon ",
+        "descripcion": "Sillon white cuero",
+        "precio": 130000,
+        "imagen": "src/assets/sillon2.jpg"
+    },
+    {
+        "id": 9,
+        "categoria": "Accesorios de corte.",
+        "nombre": "Cortadora de pelo ",
+        "descripcion": "Combo Corte Whal orange",
+        "precio": 75000,
+        "imagen": "src/assets/combo.jpg"
+    },
+   {
+        "id": 26,
+        "categoria": "Muebles.",
+        "nombre": "Lavabo ",
+        "descripcion": "Lavabo",
+        "precio": 84000,
+        "imagen": "src/assets/sillon4.jpg"
+    },  
+
+    {
+        "id": 10,
+        "categoria": "Accesorios de corte.",
+        "nombre": "Cortadora de pelo  ",
+        "descripcion": "Cortadora Wahl black",
+        "precio": 42800,
+        "imagen": "src/assets/combo1.jpg"
+    },
+    {
+        "id": 4,
+        "categoria": "Accesorios de peluqueria.",
+        "nombre": "Capa ",
+        "descripcion": "Capa barber",
+        "precio": 12000,
+        "imagen": "src/assets/capas2.jpg"
+    },
+    {
+        "id": 7,
+        "categoria": "Accesorios de peluqueria.",
+        "nombre": "Cepillo ",
+        "descripcion": "Cepillo",
+        "precio": 700,
+        "imagen": "src/assets/cepillo.jpg"
+    }
+]

@@ -1,37 +1,53 @@
-import React from 'react';
-import CartWidget from './CartWidget';
-import { Flex, Spacer, Box, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react'
 
-const NavBar = () => {
+import React from 'react'
+import CartWidget from './CartWidget.jsx';
+import { Flex, Box, Spacer, Menu, MenuButton, Container, Button, MenuList, MenuItem } from '@chakra-ui/react'
+import { ChevronDownIcon } from '@chakra-ui/icons'
+import { Link } from 'react-router-dom';
+
+
+function NavBar() {
     return (
-        <div>
-            <Flex>
+
+        <Container maxW='auto'>
+            <Flex className='navbar'>
                 <Box >
-                    Castabarber
+                    <Link to={'/'}>
+                        <h1>CastaBarber</h1>
+                    </Link>
                 </Box>
                 <Spacer />
-
                 <Menu>
-                    <MenuButton>
-                       Categorias.
+                    <MenuButton className='butonn' as={Button} rightIcon={<ChevronDownIcon />}>
+                        Categorias
                     </MenuButton>
                     <MenuList>
-                        <MenuItem>Accesorios de corte.</MenuItem>
-                        <MenuItem>Accesorios de peluqueria.</MenuItem>
-                        <MenuItem>Muebles.</MenuItem>
-                       
+                        <MenuItem>
+                            <Link to='/category/Accesorios de corte.'>
+                                <p>Accesorios de corte.</p>
+                            </Link>
+                        </MenuItem>
+                        <MenuItem>
+                            <Link to='/category/Accesorios de peluqueria.'>
+                                <p>Accesorios de peluqueria.</p>
+                            </Link>
+                        </MenuItem>
+                        <MenuItem>
+                            <Link to='/category/Muebles.'>
+                                <p>Muebles.</p>
+                            </Link>
+                        </MenuItem>
                     </MenuList>
                 </Menu>
                 <Spacer />
-                <Box >
-                    <CartWidget />
-
+                <Box>
+                    <Link to={"/cart"}>
+                        <CartWidget />
+                    </Link>
                 </Box>
             </Flex>
-
-
-
-        </div>
+        </Container>
+     
     );
 }
 
